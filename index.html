@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <title> livre de recette</title>
+</head>
+<body>
+  <div class="home">
+  <!-- title -->
+            <h2>Livre de recette</h2>
+
+  <!-- end title  -->
+  <section class="recipes-container">
+    
+    <!-- tag  -->
+    <div class="tags-container">
+      <h3 class="filtre-recipe">recipes</h3>
+     <div class="tags-list">
+      <h4 class="filtre-salty"> salé </h4>
+      <h4 class="filtre-sugary"> sucré</h4>
+      <h4 class="filtre-aperitif">apèro</h4>
+      <h4>tag</h4>
+
+      </div>
+    </div>
+    <!-- end tag  -->
+  
+    <div class="recipes-list">
+
+      <!-- soup  -->
+<section  class="taging">
+  <button id="add">Add</button>
+  <button id="purge">🚮</button>
+
+  <a href="recette-soup.html">
+      <img
+        src="./image/soup .jpg"
+        class="img recipe-img salty"
+        alt="food"
+      />
+    </a>
+  </section> 
+    
+    <!-- tiramisu  -->
+<section  class="taging">
+      <button id="add">Add</button>
+      <button id="purge">🚮</button>
+
+      <img
+      id="soup"
+        src="./image/tiramisu.jpg"
+        class="img recipe-img sugary"
+        alt="food"
+      />
+  </section>
+    
+    <!-- pizza -->
+
+<section  class="taging">
+      <button id="add">Add</button>
+      <button id="purge">🚮</button>
+
+     <a href="recette-pizza.html">
+      <img
+        src="./image/pizza.jpg"
+        class="img recipe-img salty"
+        alt="food"
+      />
+    </a>
+  </section>
+
+    <!-- risotto  -->
+<section  class="taging">
+      <button id="add">Add</button>
+      <button id="purge">🚮</button>
+
+     <a href="recette-risotto.html">
+      <img
+        src="./image/risotto.jpg"
+        class="img recipe-img salty"
+        alt="food"
+      />
+    </a>
+  </section>
+
+    <!-- verrine de bettrave  -->
+<section  class="taging">
+      <button id="add">Add</button>
+      <button id="purge">🚮</button>
+
+     <a href="recette-verrine.html">
+      <img
+        src="./image/verrine bettrave.jpg"
+        class="img recipe-img aperitif"
+        alt="food"
+      />
+    </a>
+  </section>
+
+    <!-- tacos  -->
+<section  class="taging">
+      <button id="add">Add</button>
+      <button id="purge">🚮</button>
+
+
+     <a href="recette-tacos.html">
+      <img
+        src="./image/tacos.jpg"
+        class="img recipe-img salty"
+        alt="food"
+      />
+    </a>
+  </section>
+
+  </div>
+  </div> 
+</div>
+
+<script>
+
+const homeScreen = document.querySelector(".home");
+document.querySelector ("img").addEventListener("click", () => {
+  homeScreen.style.display = "none"
+
+
+});
+
+const saltyScreen = document.querySelector(".salty");
+   console.log(saltyScreen)
+const sugaryScreen = document.querySelector(".sugary");   
+const aperitifScreen = document.querySelector(".aperitif");
+document.querySelector (".filtre-salty").addEventListener("click", () => {
+  sugaryScreen.style.display = "none"
+  aperitifScreen.style.display = "none"
+
+});
+
+
+document.querySelector (".filtre-sugary").addEventListener("click", () => {
+  
+
+});
+
+
+</script>
+
+</section>
+</body>
+</html>
+</body>
+</html>

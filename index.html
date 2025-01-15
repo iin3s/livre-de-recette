@@ -11,6 +11,7 @@
   <title> livre de recette</title>
 </head>
 <body>
+
   <div class="home">
   <!-- title -->
             <h2>Livre de recette</h2>
@@ -35,12 +36,11 @@
 <section  class="taging">
       <img
         src="./image/soup .jpg"
-        class="img recipe-img salty"
+        class="img recipe-img salty recetteSoup"
         alt="food"
       />
       <button id="more">More</button>
-      <ul id="tag"></ul>
-     
+      <ul ids="tag"></ul>
   </section> 
     
     <!-- tiramisu  -->
@@ -48,7 +48,7 @@
       <img
       id="soup"
         src="./image/tiramisu.jpg"
-        class="img recipe-img sugary"
+        class="img recipe-img sugary recetteTiramisu"
         alt="food"
       />
       <button id="more">More</button>
@@ -60,7 +60,7 @@
 <section  class="taging">
       <img
         src="./image/pizza.jpg"
-        class="img recipe-img salty"
+        class="img recipe-img salty recette3"
         alt="food"
       />
       <button id="more">More</button>
@@ -71,18 +71,18 @@
 <section  class="taging">
       <img
         src="./image/risotto.jpg"
-        class="img recipe-img salty"
+        class="img recipe-img salty recette4"
         alt="food"
       />
       <button id="more">More</button>
       <ul id="tag"></ul>
   </section>
 
-    <!-- verrine de bettrave  -->
+    <!-- verine  -->
 <section  class="taging">
       <img
         src="./image/verine.jpg"
-        class="img recipe-img aperitif"
+        class="img recipe-img aperitif recette5"
         alt="food"
       />
       <button id="more">More</button>
@@ -93,7 +93,7 @@
 <section  class="taging">
       <img
         src="./image/tacos.jpg"
-        class="img recipe-img salty"
+        class="img recipe-img salty recette6"
         alt="food"
       />
       <button id="more">More</button>
@@ -104,15 +104,78 @@
   </div> 
 </div>
 
+<!--page recipe-->
+
+<section class="recette1 hide page">
+    <article>
+      <h1>SOUPE AUX ALGUES</h1>
+      <img
+      src="./image/soupe algue2.png"
+      alt="food" 
+      width="510" height="210">
+  
+  <h3> Ingrédients (pour 2 - 3 personnes): </h3>
+      <h5>- 10 g d'algues</h5> 
+      <h5>- 60 g de bifteck coupé en lanières</h5>
+      <h5>- 1.5 L d'eau- 2 gousses d'ail écrasées</h5> 
+      <h5>- 1 c.à.c d'huile de sésame</h5> 
+      <h5>- 2 c.à.c de sauce soja</h5>
+      <h5>- 1 c.à.c de bouillon de bœuf</h5> 
+   
+  <h3> Préparation</h3>
+      <h5>- Imbibez les algues dans l'eau chaude (faire bien attention à ce que l'eau ne soit pas bouillante) jusqu'à ce qu'elles soient molles et souples. Égouttez les algues et conservez l'eau. </h5>
+      <h5>- Dans une casserole, faites revenir la viande avec l'ail et l'huile de sésame pour la faire brunir.s</h5> 
+      <h5>- Ajoutez les algues et la sauce soja pendant une minute pour mélanger les saveurs.</h5>
+      <h5>- 1.5 L d'eau- 2 gousses d'ail écrasées</h5> 
+      <h5>- Ajoutez l'eau et le bouillon de bœuf et bien remuer. Portez à ébullition pendant environ 15 minutes.e</h5> 
+      <h5>- Couvrir et laissez mijoter pendant environ 30 min/1h00 le temps que la soupe devienne plus épaisse et laiteuse.</h5>
+
+    </article>
+</section>
+
+<section class="recette2 hide page">
+  <article>
+    <h1>TIRAMISU</h1>
+    <img
+    src="./image/tiramisu.png"
+    alt="food" 
+    width="510" height="210">
+
+<h3> Ingrédients: </h3>
+    <h5>- 3 œufs</h5> 
+    <h5>- 100 g de sucre</h5>
+    <h5>- 250 g de mascarpone</h5> 
+    <h5>- 1 sachet de sucre vanillé (facultatif)</h5> 
+    <h5>- 200 g de biscuits à la cuillère (ou boudoirs)</h5>
+    <h5>- 2 cuillères à soupe de cacao en poudre non sucré</h5> 
+    <h5>- 300 ml de café fort refroidi</h5> 
+    <h5>-Une pincée de sel</h5> 
+ 
+<h3> Préparation:</h3>
+    <h5>- Préparez un café fort et laissez-le refroidir complètement. Trempez rapidement les biscuits à la cuillère dans le café, sans les détremper. </h5>
+    <h5>- Dans un saladier, fouettez les jaunes d'œufs avec le sucre jusqu'à ce que le mélange blanchisse, puis incorporez délicatement le mascarpone pour obtenir une crème lisse.</h5> 
+    <h5>- Montez les blancs d'œufs en neige ferme avec une pincée de sel, puis incorporez-les doucement à la crème au mascarpone.</h5>
+    <h5>- Disposez une couche de biscuits imbibés au fond du plat, ajoutez une couche de crème au mascarpone, puis répétez l'opération en terminant par une couche de crème.</h5> 
+    <h5>- Saupoudrez le dessus de cacao en poudre à l'aide d'une passoire fine et laissez reposer au réfrigérateur au moins 4 heures avant de servir.</h5> 
+  
+  </article>
+</section>
+<!--end page recipe-->
+
 <script>
 
-// image and filter
-const homeScreen = document.querySelector(".home");
-document.querySelector ("img").addEventListener("click", () => {
-  homeScreen.style.display = "none"
+// image and filter:
+// soup:
+document.querySelector (".recetteSoup").addEventListener("click", () => {
+  document.querySelector(".recette1").classList.remove("hide")});
+
+// tiramisu:
+document.querySelector (".recetteTiramisu").addEventListener("click", () => {
+  document.querySelector(".recette2").classList.remove("hide")});
 
 
-});
+//document.querySelector(".recette1").classList.add("hide")
+
 
 const saltyScreen = document.querySelector(".salty");
    console.log(saltyScreen)

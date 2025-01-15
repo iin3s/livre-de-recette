@@ -25,8 +25,6 @@
       <h4 class="filtre-salty"> salé </h4>
       <h4 class="filtre-sugary"> sucré</h4>
       <h4 class="filtre-aperitif">apèro</h4>
-      <h4>tag</h4>
-
       </div>
     </div>
     <!-- end tag  -->
@@ -35,87 +33,71 @@
 
       <!-- soup  -->
 <section  class="taging">
-  <button id="add">Add</button>
-  <button id="purge">🚮</button>
-
-  <a href="recette-soup.html">
       <img
         src="./image/soup .jpg"
         class="img recipe-img salty"
         alt="food"
       />
-    </a>
+      <button id="more">More</button>
+      <ul id="tag"></ul>
+     
   </section> 
     
     <!-- tiramisu  -->
 <section  class="taging">
-      <button id="add">Add</button>
-      <button id="purge">🚮</button>
-
       <img
       id="soup"
         src="./image/tiramisu.jpg"
         class="img recipe-img sugary"
         alt="food"
       />
+      <button id="more">More</button>
+      <ul id="tag"></ul>
   </section>
     
     <!-- pizza -->
 
 <section  class="taging">
-      <button id="add">Add</button>
-      <button id="purge">🚮</button>
-
-     <a href="recette-pizza.html">
       <img
         src="./image/pizza.jpg"
         class="img recipe-img salty"
         alt="food"
       />
-    </a>
+      <button id="more">More</button>
+      <ul id="tag"></ul>
   </section>
 
     <!-- risotto  -->
 <section  class="taging">
-      <button id="add">Add</button>
-      <button id="purge">🚮</button>
-
-     <a href="recette-risotto.html">
       <img
         src="./image/risotto.jpg"
         class="img recipe-img salty"
         alt="food"
       />
-    </a>
+      <button id="more">More</button>
+      <ul id="tag"></ul>
   </section>
 
     <!-- verrine de bettrave  -->
 <section  class="taging">
-      <button id="add">Add</button>
-      <button id="purge">🚮</button>
-
-     <a href="recette-verrine.html">
       <img
-        src="./image/verrine bettrave.jpg"
+        src="./image/verine.jpg"
         class="img recipe-img aperitif"
         alt="food"
       />
-    </a>
+      <button id="more">More</button>
+      <ul id="tag"></ul>
   </section>
 
     <!-- tacos  -->
 <section  class="taging">
-      <button id="add">Add</button>
-      <button id="purge">🚮</button>
-
-
-     <a href="recette-tacos.html">
       <img
         src="./image/tacos.jpg"
         class="img recipe-img salty"
         alt="food"
       />
-    </a>
+      <button id="more">More</button>
+      <ul id="tag"></ul>
   </section>
 
   </div>
@@ -124,6 +106,7 @@
 
 <script>
 
+// image and filter
 const homeScreen = document.querySelector(".home");
 document.querySelector ("img").addEventListener("click", () => {
   homeScreen.style.display = "none"
@@ -140,12 +123,46 @@ document.querySelector (".filtre-salty").addEventListener("click", () => {
   aperitifScreen.style.display = "none"
 
 });
+// end image and filer
 
 
-document.querySelector (".filtre-sugary").addEventListener("click", () => {
-  
+// taging
 
-});
+const tag = document.querySelector("#tag");
+const addBtn = document.querySelector("button#more");
+
+
+addBtn.addEventListener("click",() => {
+        tag.insertAdjacentHTML("beforeend",`
+        <li id="new-todo" class="todo">
+            <article>
+                <h2>vegetarian</h2>
+                <input type="checkbox" />
+                <button>❌</button>
+            </article>
+        </li>
+    `)
+
+    const newTodo = document.querySelector("#new-todo");
+
+    const checkbox = newTodo.querySelector("input");
+    const button = newTodo.querySelector("button");
+
+  checkbox.addEventListener("change", () => {
+        if(checkbox.checked){
+            newTodo.classList.add("done");
+        }else{
+            newTodo.classList.remove("done");
+        }
+    })
+
+    button.addEventListener("click", () => { 
+        newTodo.remove();
+    });
+
+    newTodo.id = "  ";
+})
+
 
 
 </script>

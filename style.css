@@ -35,6 +35,17 @@ h2 {
 }
 
 
+.taging {
+  position: relative;
+}
+
+button#more {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+
 @media screen and (min-width: 576px) {
   .recipes-list {
     grid-template-columns: 1fr 1fr;
@@ -42,13 +53,15 @@ h2 {
   .recipe-img {
     height: 10rem;
   }
-}
+
 
 @media screen and (min-width: 992px) {
   .recipes-container {
     grid-template-columns: 200px 1fr;
     gap: 1rem;
   }
+
+
   .tags-list {
     display: grid;
     grid-template-columns: 1fr;

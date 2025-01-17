@@ -21,30 +21,29 @@
     
     <!-- tag  -->
     <div class="tags-container">
-      <h3 class="filtre-recipe">recipes</h3>
-     <div class="tags-list">
-      <h4 class="filtre-salty"> salé </h4>
-      <h4 class="filtre-sugary"> sucré</h4>
-      <h4 class="filtre-aperitif">apèro</h4>
-      </div>
+      <button class="filter" data-filter="salty">Salé</button>
+      <button class="filter" data-filter="sugary">Sucré</button>
+      <button class="filter" data-filter="aperitif">Apéro</button>
+      <button class="filter" data-filter="all">Tout</button>
+    </div>
     </div>
     <!-- end tag  -->
   
     <div class="recipes-list">
 
       <!-- soup  -->
-<section  class="taging">
+<section  class="taging salty">
       <img
         src="./image/soup .jpg"
         class="img recipe-img salty recetteSoup"
         alt="food"
       />
       <button id="more">More</button>
-      <ul ids="tag"></ul>
+      <ul id="tag"></ul>
   </section> 
     
     <!-- tiramisu  -->
-<section  class="taging">
+<section  class="taging sugary">
       <img
       id="soup"
         src="./image/tiramisu.jpg"
@@ -57,10 +56,10 @@
     
     <!-- pizza -->
 
-<section  class="taging">
+<section  class="taging salty">
       <img
         src="./image/pizza.jpg"
-        class="img recipe-img salty recette3"
+        class="img recipe-img salty recettePizza"
         alt="food"
       />
       <button id="more">More</button>
@@ -68,10 +67,10 @@
   </section>
 
     <!-- risotto  -->
-<section  class="taging">
+<section  class="taging salty">
       <img
         src="./image/risotto.jpg"
-        class="img recipe-img salty recette4"
+        class="img recipe-img salty recetteRisotto"
         alt="food"
       />
       <button id="more">More</button>
@@ -79,10 +78,10 @@
   </section>
 
     <!-- verine  -->
-<section  class="taging">
+<section  class="taging aperitif">
       <img
         src="./image/verine.jpg"
-        class="img recipe-img aperitif recette5"
+        class="img recipe-img aperitif recetteVerine"
         alt="food"
       />
       <button id="more">More</button>
@@ -90,10 +89,10 @@
   </section>
 
     <!-- tacos  -->
-<section  class="taging">
+<section  class="taging salty">
       <img
         src="./image/tacos.jpg"
-        class="img recipe-img salty recette6"
+        class="img recipe-img salty recetteTacos"
         alt="food"
       />
       <button id="more">More</button>
@@ -110,9 +109,9 @@
     <article>
       <h1>SOUPE AUX ALGUES</h1>
       <img
-      src="./image/soupe algue2.png"
+      src="./image/soup .jpg"
       alt="food" 
-      width="510" height="210">
+      width="150" height="210">
   
   <h3> Ingrédients (pour 2 - 3 personnes): </h3>
       <h5>- 10 g d'algues</h5> 
@@ -137,9 +136,9 @@
   <article>
     <h1>TIRAMISU</h1>
     <img
-    src="./image/tiramisu.png"
+    src="./image/tiramisu.jpg"
     alt="food" 
-    width="510" height="210">
+    width="150" height="210">
 
 <h3> Ingrédients: </h3>
     <h5>- 3 œufs</h5> 
@@ -160,11 +159,112 @@
   
   </article>
 </section>
+
+<section class="recette3 hide page">
+  <article>
+    <h1>PIZZA</h1>
+    <img
+    src="./image/pizza.jpg"
+    alt="food" 
+    width="150" height="210">
+
+<h3> Ingrédients: </h3>
+    <h5>- pâte à pizza</h5> 
+    <h5>- 150 g de sauce tomate</h5>
+    <h5>- 200 g de mozzarella </h5> 
+    <h5>- 100 g de jambon ou charcuterie au choix</h5> 
+    <h5>- Une poignée de champignons </h5>
+    <h5>- Un filet d'huile d'olive</h5> 
+ 
+<h3> Préparation:</h3>
+    <h5>-  Étalez une couche de sauce tomate en laissant un bord d’environ 1 cm.  </h5>
+    <h5>- Ajoutez la mozzarella en tranches, le jambon, les lamelles de poivron, les champignons, et quelques olives. </h5> 
+    <h5>- Saupoudrez d'origan et ajoutez un filet d'huile d'olive pour relever les saveurs.</h5>
+    <h5>- Faites cuire dans un four préchauffé à 220°C pendant environ 12 à 15 minutes.</h5> 
+    <h5>-  La pâte doit être dorée et croustillante, et le fromage bien fondu.</h5>
+  </article>
+</section>
+
+<section class="recette4 hide page">
+  <article>
+    <h1>RISOTTO</h1>
+    <img
+    src="./image/risotto.jpg"
+    alt="food" 
+    width="150" height="210">
+
+<h3> Ingrédients: </h3>
+    <h5>- 300 g de riz arborio</h5> 
+    <h5>- 1 litre de bouillon de légumes</h5>
+    <h5>- 1 oignon finement émincé</h5> 
+    <h5>- 100 g de parmesan râpé</h5> 
+    <h5>- 20 cl de crème fraîche</h5>
+    <h5>- 30 g de beurre</h5> 
+    <h5>- 2 cuillères à soupe d’huile d’olive</h5>
+    <h5>- Sel et poivre</h5>  
+ 
+<h3> Préparation</h3>
+    <h5>- Dans une casserole, faites revenir l’oignon avec l’huile d’olive jusqu’à ce qu’il soit translucide.</h5>
+    <h5>- Ajoutez le riz et faites-le nacrer.</h5> 
+    <h5>- Ajoutez le bouillon chaud, louche par louche, en remuant constamment.</h5>
+    <h5>- 1.5 L d'eau- 2 gousses d'ail écrasées</h5> 
+    <h5>- Mélangez bien pour obtenir une texture crémeuse. Salez, poivrez et servez immédiatement.</h5> 
+  </article>
+</section>
+
+<section class="recette5 hide page">
+  <article>
+    <h1>BEETROOT VERRINE</h1>
+    <img
+    src="./image/verine.jpg"
+    alt="food" 
+    width="190" height="210">
+
+<h3> Ingrédients: </h3>
+    <h5>- 2 grosses betteraves cuites</h5> 
+    <h5>- 200 g de fromage frais</h5>
+    <h5>- 10 cl de crème liquide</h5> 
+    <h5>- 1 cuillère à soupe de jus de citron</h5> 
+    <h5>- Une pincée de sel et de poivr</h5>
+ 
+<h3> Préparation:</h3>
+    <h5>- Mixez les betteraves avec le jus de citron et la crème liquide jusqu’à obtenir une texture lisse.  </h5>
+    <h5>- Dans chaque verrine, déposez une couche de crème de betterave, puis une couche de fromage frais. </h5> 
+    <h5>- Ajoutez des noix concassées ou de la ciboulette sur le dessus pour une touche croquante et colorée.</h5>
+    <h5>- Placez les verrines au réfrigérateur pendant 30 minutes avant de servir.</h5> 
+   
+  </article>
+</section>
+
+<section class="recette6 hide page">
+  <article>
+    <h1>TACOS</h1>
+    <img
+    src="./image/tacos.jpg"
+    alt="food" 
+    width="150" height="210">
+
+<h3> Ingrédients: </h3>
+    <h5>- 300 g de viande hachée </h5> 
+    <h5>- 1 oignon émincé</h5>
+    <h5>- 1 cuillère à soupe d’épices pour tacos </h5> 
+    <h5>- 4 feuilles de laitue</h5> 
+    <h5>- 2 tomates coupées en dés</h5>
+    <h5>- 1 poivron coupé en lamelles</h5> 
+ 
+<h3> Préparation</h3>
+    <h5>- Faites revenir l’oignon et le poivron dans une poêle avec un filet d’huile.  </h5>
+    <h5>- Ajoutez la viande hachée et les épices, puis laissez cuire quelques minutes.</h5> 
+    <h5>- Garnissez les tortillas avec une feuille de laitue, la viande, les légumes, les dés de tomate, du fromage râpé et la sauce de votre choix.</h5>
+    <h5>- Repliez les bords des tacos et dégustez immédiatement</h5>
+  </article>
+</section>
+
 <!--end page recipe-->
 
 <script>
 
-// image and filter:
+// recipes page
 // soup:
 document.querySelector (".recetteSoup").addEventListener("click", () => {
   document.querySelector(".recette1").classList.remove("hide")});
@@ -173,61 +273,66 @@ document.querySelector (".recetteSoup").addEventListener("click", () => {
 document.querySelector (".recetteTiramisu").addEventListener("click", () => {
   document.querySelector(".recette2").classList.remove("hide")});
 
+// pizza:
+document.querySelector (".recettePizza").addEventListener("click", () => {
+  document.querySelector(".recette3").classList.remove("hide")});
 
+// risotto:
+document.querySelector (".recetteRisotto").addEventListener("click", () => {
+  document.querySelector(".recette4").classList.remove("hide")});
+
+// verrine:
+document.querySelector (".recetteVerine").addEventListener("click", () => {
+  document.querySelector(".recette5").classList.remove("hide")});
+
+// tacos:
+document.querySelector (".recetteTacos").addEventListener("click", () => {
+  document.querySelector(".recette6").classList.remove("hide")});
+
+  
 //document.querySelector(".recette1").classList.add("hide")
 
+//image and filter
+const filterButtons = document.querySelectorAll(".filter");
+    const recipes = document.querySelectorAll(".taging");
 
-const saltyScreen = document.querySelector(".salty");
-   console.log(saltyScreen)
-const sugaryScreen = document.querySelector(".sugary");   
-const aperitifScreen = document.querySelector(".aperitif");
-document.querySelector (".filtre-salty").addEventListener("click", () => {
-  sugaryScreen.style.display = "none"
-  aperitifScreen.style.display = "none"
+    filterButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        const filter = button.dataset.filter;
 
-});
-// end image and filer
+        recipes.forEach(recipe => {
+          if (filter === "all" || recipe.classList.contains(filter)) {
+            recipe.style.display = "block";
+          } else {
+            recipe.style.display = "none";
+          }
+        });
+      });
+    });
+
 
 
 // taging
-
 const tag = document.querySelector("#tag");
-const addBtn = document.querySelector("button#more");
+const addBtns = document.querySelectorAll("button#more");
 
+addBtns.forEach(addBtn => {
+  addBtn.addEventListener("click", () => {
+    tag.insertAdjacentHTML("beforeend", `
+      <div class="tag-item">
+        <span>vegetarian</span>
+        <button class="remove-tag">❌</button>
+      </div>
+    `);
 
-addBtn.addEventListener("click",() => {
-        tag.insertAdjacentHTML("beforeend",`
-        <li id="new-todo" class="todo">
-            <article>
-                <h2>vegetarian</h2>
-                <input type="checkbox" />
-                <button>❌</button>
-            </article>
-        </li>
-    `)
+    const newTag = tag.lastElementChild;
+    const removeBtn = newTag.querySelector(".remove-tag");
 
-    const newTodo = document.querySelector("#new-todo");
-
-    const checkbox = newTodo.querySelector("input");
-    const button = newTodo.querySelector("button");
-
-  checkbox.addEventListener("change", () => {
-        if(checkbox.checked){
-            newTodo.classList.add("done");
-        }else{
-            newTodo.classList.remove("done");
-        }
-    })
-
-    button.addEventListener("click", () => { 
-        newTodo.remove();
+    removeBtn.addEventListener("click", () => {
+      newTag.remove();
     });
-
-    newTodo.id = "  ";
-})
-
-
-
+  });
+});
 </script>
 
 </section>

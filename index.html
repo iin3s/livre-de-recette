@@ -1,340 +1,379 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
 
-<body>
-  <title> livre de recette</title>
-</head>
-<body>
+      body {
+        margin: 0;
+      }
 
-  <div class="home">
-  <!-- title -->
-            <h2>Livre de recette</h2>
+      img {
+        max-width: 300px;
+        max-height: 300px;
+      }
 
+      main {
+        height: 100vh;
 
-  <section class="recipes-container">
-    
-    <!-- tag  -->
-    <div class="tags-container">
-      <button class="filter" data-filter="salty">Salé</button>
-      <button class="filter" data-filter="sugary">Sucré</button>
-      <button class="filter" data-filter="aperitif">Apéro</button>
-      <button class="filter" data-filter="all">Tout</button>
-    </div>
-    </div>
+        display: grid;
+        align-items: center;
+
+        /* prettier-ignore */
+        grid:
+          "controls recipe-view" auto
+          "recipes  recipe-view" 1fr
+          /1fr      2fr;
+      }
+
+      section {
+        padding: 1rem;
+      }
+
+      #controls {
+        grid-area: controls;
+      }
+
+      #recipes {
+        grid-area: recipes;
+        overflow-y: auto;
+
+        width: 100%;
+
+        list-style-type: none;
+
+        li {
+          padding: 1rem;
+          cursor: pointer;
+        }
+        li:not(:last-child) {
+          border-bottom: 1px solid grey;
+        }
+      }
+
+      #recipe-view {
+        grid-area: recipe-view;
+
+        article {
+          width: 100%;
+        }
+      }
+
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section id="controls">
+        <ul id="filters">
+          <li id="all"><button>Tout</button></li>
+          <li id="salty"><button>Salé</button></li>
+          <li id="sweet"><button>Sucré</button></li>
+        </ul>
+      </section>
+      <ul id="recipes">
+        <li id="pizza" class="recipe salty">
+            <h1>Pizza</h1>
+            <input type="text" placeholder="tag" />
+            <button class="tag-submit">Ajouter</button>
+            <button class="remove-recipe">Voir recette</button>
+            <ul class="tags"></ul>
+          </li>
+        <li id="tiramisu" class="recipe sweet">
+            <h1>Tiramisu</h1>
+            <input type="text" placeholder="tag" />
+            <button class="tag-submit">Ajouter</button>
+            <button class="remove-recipe">Voir recette</button>
+            <ul class="tags"></ul>
+          </li> 
+          <li id="soup" class="recipe salty">
+            <h1>Soupe</h1>
+            <input type="text" placeholder="tag" />
+            <button class="tag-submit">Ajouter</button>
+            <button class="remove-recipe">Enlever</button>
+            <ul class="tags"></ul>
+          </li>
+          <li id="risotto" class="recipe salty">
+            <h1>Risotto</h1>
+            <input type="text" placeholder="tag" />
+            <button class="tag-submit">Ajouter</button>
+            <button class="remove-recipe">Voir recette</button>
+            <ul class="tags"></ul>
+          </li>
+          <li id="cookie" class="recipe sweet">
+            <h1>Cookie</h1>
+            <input type="text" placeholder="tag" />
+            <button class="tag-submit">Ajouter</button>
+            <button class="remove-recipe">Voir recette</button>
+            <ul class="tags"></ul>
+          </li>
+          <li id="pudding" class="recipe sweet">
+            <h1>Pudding</h1>
+            <input type="text" placeholder="tag" />
+            <button class="tag-submit">Ajouter</button>
+            <button class="remove-recipe">Voir recette</button>
+            <ul class="tags"></ul>
+          </li>
+      </ul>
+      <section id="recipe-view">
+        <article id="pizza-view">
+          <h1>Pizza</h1>
+          <img src="./image/pizza.jpg" />
+          <ul>
+            <li>pâte à pizza</li>
+            <li>tomate</li>
+            <li>fromage</li>
+            <li>sel</li>
+          </ul>
+          <div>
+            <p>
+              Étalez une couche de sauce tomate.
+            </p>
+            <p>
+              Ajoutez la mozzarella en tranches, le jambon, les lamelles de poivron.
+            </p>
+            <p>
+              Saupoudrez d'origan et ajoutez un filet d'huile d'olive.
+            </p>
+            <p>
+              Faites cuire dans un four préchauffé à 220°C.
+            </p>
+            <p>
+              La pâte doit être dorée et croustillante, et le fromage bien fondu.
+            </p>
+          </div>
+        </article>
+        <article id="tiramisu-view">
+          <h1>Tiramisu</h1>
+          <img src="./image/tiramisu.jpg" />
+          <ul>
+            <li>crème fraiche</li>
+            <li>terre</li>
+            <li>sucre en poudre</li>
+            <li>café</li>
+          </ul>
+          <div>
+            <p>
+              Trempez rapidement les biscuits à la cuillère dans le café, 
+              sans les détremper.
+            </p>
+            <p>
+              Dans un saladier, fouettez les jaunes d'œufs avec le sucre 
+              jusqu'à ce que le mélange blanchisse.
+            </p>
+            <p>
+              Montez les blancs d'œufs en neige ferme avec une pincée de sel.
+            </p>
+            <p>
+              ajoutez une couche de crème au mascarpone,répétez 
+              l'opération en terminant par une couche de crème.
+            </p>
+            <p>
+              Saupoudrez le dessus de terre.
+            </p>
+          </div>
+        </article>
+        <article id="soup-view">
+          <h1>Soupe</h1>
+          <img src="./image/soup.jpg" />
+          <ul>
+            <li>1L d'eau</li>
+            <li>sel</li>
+            <li>3 grenouille</li>
+            <li>pierre</li>
+            <li>1kg de sable</li>       
+          </ul>
+          <div>
+            <p>Dans une casserole, faites revenir la viande avec l'ail et l'huile de sésame
+               pour la faire brunir.
+              </p>
+              <p>Ajoutez les algues et la sauce soja pendant une minute pour mélanger les saveurs.
+               </p>
+               <p>Couvrir et laissez mijoter pendant environ 30 min/1h00 le temps que la soupe 
+                devienne plus épaisse et laiteuse.
+               </p>
+          </div>
+        </article>
+        <article id="risotto-view">
+          <h1>Risotto</h1>
+          <img src="./image/risotto.jpg" />
+          <ul>
+            <li>des fruits</li>
+            <li>de la pierre</li>
+            <li>des épices d'Italie</li>
+            <li>du beurre</li>
+          </ul>
+          <div>
+            <p>
+                Dans une casserole, faites revenir 
+                l’oignon avec l’huile d’olive jusqu’à ce qu’il soit translucide.
+            </p>
+            <p>
+                Ajoutez le riz et faites-le nacrer.
+            </p>
+            <p>
+                Ajoutez le bouillon chaud, louche par louche,
+                en remuant constamment.
+            </p>
+            <p>
+                1.5 L d'eau- 2 gousses d'ail écrasées.
+            </p>
+            <p>
+                Mélangez bien pour obtenir une texture crémeuse.
+                Salez, poivrez et servez immédiatement.
+            </p>
+          </div>
+        </article>
+        <article id="cookie-view">
+          <h1>Cookie</h1>
+          <img src="./image/cookie.jpg" />
+          <ul>
+            <li>1000g beurre</li>
+            <li>3000 pepites de chocolats</li>
+            <li>2L de lait</li>
+            <li>300g de sucre</li>
+          </ul>
+          <div>
+            <p>
+              Faire fondre le beurre pendant 2h.
+            </p>
+            <p>
+              Mélangez le beurre avec le sucre jusqu'a que ça devienne rose.
+            </p>
+            <p>
+              Ajoutez le lait, melanger et faites des boules.
+            </p>
+            <p>
+              Mettre au foure pendant 1h à 500C.
+            </p>
+          </article>
+            <article id="pudding-view">
+              <h1>Pudding</h1>
+              <img src="./image/pudding.jpg" />
+              <ul>
+                <li>beaucoup de lait </li>
+                <li>un peu de sel</li>
+                <li>une pincé de beurre</li>
+                <li>très peu de canelle</li>
+              </ul>
+              <div>
+                <p>
+                  Ajouter le reste du lait en délayant progressivement.
+                </p>
+                <p>
+                  Faites en sorte que la pâte soit souple ni trop épaisse, ni trop liquide.
+                </p>
+                <p>
+                 Verser la pâte dans un moule beurré et faire cuire au four 45/50 min à 190°
+                </p>
+                <p>
+                 Laissez reposer.
+                </p>
+          </div>
+      
+        </article>
+      </section>
+    </main>
+    <script>
+function hideAllRecipes() {
+    document.querySelectorAll(".recipe-view").forEach((recipeView) => {
+      recipeView.classList.add("hidden");
+    });
+  }
+
+hideAllRecipes();
+
+const recipeEls = document.querySelectorAll(".recipe");
+const filtersEl = document.querySelector("#filters");
+
+filtersEl.querySelectorAll("li").forEach((filterEl) => {
+  filterEl
+    .querySelector("button")
+    .addEventListener("click", () => filter(filterEl));
+});
+
+recipeEls.forEach((recipeEl) => {
+  recipeEl.addEventListener("click", () => {
+    hideAllRecipes();
+    document
+      .querySelector(`#${recipeEl.id}-view`)
+      .classList.remove("hidden");
+  });
+
+  recipeEl.querySelector(".tag-submit").addEventListener("click", () => {
+    const newTag = recipeEl.querySelector("input").value;
    
-  
-    <div class="recipes-list">
 
-      <!-- soup  -->
-<section  class="taging salty">
-      <img
-        src="./image/soup .jpg"
-        class="img recipe-img salty recetteSoup"
-        alt="food"
-      />
-      <button id="more">More</button>
-      <ul id="tag"></ul>
-  </section> 
-    
-    <!-- tiramisu  -->
-<section  class="taging sugary">
-      <img
-      id="soup"
-        src="./image/tiramisu.jpg"
-        class="img recipe-img sugary recetteTiramisu"
-        alt="food"
-      />
-      <button id="more">More</button>
-      <ul id="tag"></ul>
-  </section>
-    
-    <!-- pizza -->
+    const existingTag = recipeEl.querySelector(`.tags > .${newTag}`);
 
-<section  class="taging salty">
-      <img
-        src="./image/pizza.jpg"
-        class="img recipe-img salty recettePizza"
-        alt="food"
-      />
-      <button id="more">More</button>
-      <ul id="tag"></ul>
-  </section>
+    if (existingTag) { 
+      return; 
+    }
 
-    <!-- risotto  -->
-<section  class="taging salty">
-      <img
-        src="./image/risotto.jpg"
-        class="img recipe-img salty recetteRisotto"
-        alt="food"
-      />
-      <button id="more">More</button>
-      <ul id="tag"></ul>
-  </section>
+    recipeEl.querySelector(".tags").insertAdjacentHTML(
+      "beforeend",
+      `
+      <div id="fresh-tag" class="tag vegetarian">
+        <p>vegetarian</p>
+        <button>❌</button>
+      </div>
+    `
+    );
 
-    <!-- verine  -->
-<section  class="taging aperitif">
-      <img
-        src="./image/verine.jpg"
-        class="img recipe-img aperitif recetteVerine"
-        alt="food"
-      />
-      <button id="more">More</button>
-      <ul id="tag"></ul>
-  </section>
+    const newTagEl = document.querySelector("#fresh-tag");
+          newTagEl.id = "";
 
-    <!-- tacos  -->
-<section  class="taging salty">
-      <img
-        src="./image/tacos.jpg"
-        class="img recipe-img salty recetteTacos"
-        alt="food"
-      />
-      <button id="more">More</button>
-      <ul id="tag"></ul>
-  </section>
+          newTagEl.querySelector("button").addEventListener("click", () => {
+            newTagEl.remove();
+          });
 
-  </div>
-  </div> 
-</div>
+          // const existingFilter = filters.querySelector(`.${newTag}`);
 
-<!--page recipe-->
-<section class="recette1 hide page">
-    <article>
-      <h1>SOUPE AUX ALGUES</h1>
-      <img
-      src="./image/soup .jpg"
-      alt="food" 
-      width="150" height="210">
-  
-  <h3> Ingrédients (pour 2 - 3 personnes): </h3>
-      <h5>- 10 g d'algues</h5> 
-      <h5>- 60 g de bifteck coupé en lanières</h5>
-      <h5>- 1.5 L d'eau- 2 gousses d'ail écrasées</h5> 
-      <h5>- 1 c.à.c d'huile de sésame</h5> 
-      <h5>- 2 c.à.c de sauce soja</h5>
-      <h5>- 1 c.à.c de bouillon de bœuf</h5> 
-   
-  <h3> Préparation</h3>
-      <h5>- Imbibez les algues dans l'eau chaude (faire bien attention à ce que l'eau ne soit pas bouillante) jusqu'à ce qu'elles soient molles et souples. Égouttez les algues et conservez l'eau. </h5>
-      <h5>- Dans une casserole, faites revenir la viande avec l'ail et l'huile de sésame pour la faire brunir.s</h5> 
-      <h5>- Ajoutez les algues et la sauce soja pendant une minute pour mélanger les saveurs.</h5>
-      <h5>- 1.5 L d'eau- 2 gousses d'ail écrasées</h5> 
-      <h5>- Ajoutez l'eau et le bouillon de bœuf et bien remuer. Portez à ébullition pendant environ 15 minutes.e</h5> 
-      <h5>- Couvrir et laissez mijoter pendant environ 30 min/1h00 le temps que la soupe devienne plus épaisse et laiteuse.</h5>
+          // if(existingFilter){
+          //   return; // la meme que ci-dessus
+          // }
 
-    </article>
-</section>
+          // filtersEl.insertAdjacentHTML(
+          //   "beforeend",
+          //   `
+          //   <li id="fresh-filter" class="vegetarian "><button>vegetarian</button></li>
+          // `
+          // );
 
-<section class="recette2 hide page">
-  <article>
-    <h1>TIRAMISU</h1>
-    <img
-    src="./image/tiramisu.jpg"
-    alt="food" 
-    width="150" height="210">
-
-<h3> Ingrédients: </h3>
-    <h5>- 3 œufs</h5> 
-    <h5>- 100 g de sucre</h5>
-    <h5>- 250 g de mascarpone</h5> 
-    <h5>- 1 sachet de sucre vanillé (facultatif)</h5> 
-    <h5>- 200 g de biscuits à la cuillère (ou boudoirs)</h5>
-    <h5>- 2 cuillères à soupe de cacao en poudre non sucré</h5> 
-    <h5>- 300 ml de café fort refroidi</h5> 
-    <h5>-Une pincée de sel</h5> 
- 
-<h3> Préparation:</h3>
-    <h5>- Préparez un café fort et laissez-le refroidir complètement. Trempez rapidement les biscuits à la cuillère dans le café, sans les détremper. </h5>
-    <h5>- Dans un saladier, fouettez les jaunes d'œufs avec le sucre jusqu'à ce que le mélange blanchisse, puis incorporez délicatement le mascarpone pour obtenir une crème lisse.</h5> 
-    <h5>- Montez les blancs d'œufs en neige ferme avec une pincée de sel, puis incorporez-les doucement à la crème au mascarpone.</h5>
-    <h5>- Disposez une couche de biscuits imbibés au fond du plat, ajoutez une couche de crème au mascarpone, puis répétez l'opération en terminant par une couche de crème.</h5> 
-    <h5>- Saupoudrez le dessus de cacao en poudre à l'aide d'une passoire fine et laissez reposer au réfrigérateur au moins 4 heures avant de servir.</h5> 
-  
-  </article>
-</section>
-
-<section class="recette3 hide page">
-  <article>
-    <h1>PIZZA</h1>
-    <img
-    src="./image/pizza.jpg"
-    alt="food" 
-    width="150" height="210">
-
-<h3> Ingrédients: </h3>
-    <h5>- pâte à pizza</h5> 
-    <h5>- 150 g de sauce tomate</h5>
-    <h5>- 200 g de mozzarella </h5> 
-    <h5>- 100 g de jambon ou charcuterie au choix</h5> 
-    <h5>- Une poignée de champignons </h5>
-    <h5>- Un filet d'huile d'olive</h5> 
- 
-<h3> Préparation:</h3>
-    <h5>-  Étalez une couche de sauce tomate en laissant un bord d’environ 1 cm.  </h5>
-    <h5>- Ajoutez la mozzarella en tranches, le jambon, les lamelles de poivron, les champignons, et quelques olives. </h5> 
-    <h5>- Saupoudrez d'origan et ajoutez un filet d'huile d'olive pour relever les saveurs.</h5>
-    <h5>- Faites cuire dans un four préchauffé à 220°C pendant environ 12 à 15 minutes.</h5> 
-    <h5>-  La pâte doit être dorée et croustillante, et le fromage bien fondu.</h5>
-  </article>
-</section>
-
-<section class="recette4 hide page">
-  <article>
-    <h1>RISOTTO</h1>
-    <img
-    src="./image/risotto.jpg"
-    alt="food" 
-    width="150" height="210">
-
-<h3> Ingrédients: </h3>
-    <h5>- 300 g de riz arborio</h5> 
-    <h5>- 1 litre de bouillon de légumes</h5>
-    <h5>- 1 oignon finement émincé</h5> 
-    <h5>- 100 g de parmesan râpé</h5> 
-    <h5>- 20 cl de crème fraîche</h5>
-    <h5>- 30 g de beurre</h5> 
-    <h5>- 2 cuillères à soupe d’huile d’olive</h5>
-    <h5>- Sel et poivre</h5>  
- 
-<h3> Préparation</h3>
-    <h5>- Dans une casserole, faites revenir l’oignon avec l’huile d’olive jusqu’à ce qu’il soit translucide.</h5>
-    <h5>- Ajoutez le riz et faites-le nacrer.</h5> 
-    <h5>- Ajoutez le bouillon chaud, louche par louche, en remuant constamment.</h5>
-    <h5>- 1.5 L d'eau- 2 gousses d'ail écrasées</h5> 
-    <h5>- Mélangez bien pour obtenir une texture crémeuse. Salez, poivrez et servez immédiatement.</h5> 
-  </article>
-</section>
-
-<section class="recette5 hide page">
-  <article>
-    <h1>BEETROOT VERRINE</h1>
-    <img
-    src="./image/verine.jpg"
-    alt="food" 
-    width="190" height="210">
-
-<h3> Ingrédients: </h3>
-    <h5>- 2 grosses betteraves cuites</h5> 
-    <h5>- 200 g de fromage frais</h5>
-    <h5>- 10 cl de crème liquide</h5> 
-    <h5>- 1 cuillère à soupe de jus de citron</h5> 
-    <h5>- Une pincée de sel et de poivr</h5>
- 
-<h3> Préparation:</h3>
-    <h5>- Mixez les betteraves avec le jus de citron et la crème liquide jusqu’à obtenir une texture lisse.  </h5>
-    <h5>- Dans chaque verrine, déposez une couche de crème de betterave, puis une couche de fromage frais. </h5> 
-    <h5>- Ajoutez des noix concassées ou de la ciboulette sur le dessus pour une touche croquante et colorée.</h5>
-    <h5>- Placez les verrines au réfrigérateur pendant 30 minutes avant de servir.</h5> 
-   
-  </article>
-</section>
-
-<section class="recette6 hide page">
-  <article>
-    <h1>TACOS</h1>
-    <img
-    src="./image/tacos.jpg"
-    alt="food" 
-    width="150" height="210">
-
-<h3> Ingrédients: </h3>
-    <h5>- 300 g de viande hachée </h5> 
-    <h5>- 1 oignon émincé</h5>
-    <h5>- 1 cuillère à soupe d’épices pour tacos </h5> 
-    <h5>- 4 feuilles de laitue</h5> 
-    <h5>- 2 tomates coupées en dés</h5>
-    <h5>- 1 poivron coupé en lamelles</h5> 
- 
-<h3> Préparation</h3>
-    <h5>- Faites revenir l’oignon et le poivron dans une poêle avec un filet d’huile.  </h5>
-    <h5>- Ajoutez la viande hachée et les épices, puis laissez cuire quelques minutes.</h5> 
-    <h5>- Garnissez les tortillas avec une feuille de laitue, la viande, les légumes, les dés de tomate, du fromage râpé et la sauce de votre choix.</h5>
-    <h5>- Repliez les bords des tacos et dégustez immédiatement</h5>
-  </article>
-</section>
-
-
-
-<script>
-
-// recipes page
-// soup:
-document.querySelector (".recetteSoup").addEventListener("click", () => {
-  document.querySelector(".recette1").classList.remove("hide")});
-
-// tiramisu:
-document.querySelector (".recetteTiramisu").addEventListener("click", () => {
-  document.querySelector(".recette2").classList.remove("hide")});
-
-// pizza:
-document.querySelector (".recettePizza").addEventListener("click", () => {
-  document.querySelector(".recette3").classList.remove("hide")});
-
-// risotto:
-document.querySelector (".recetteRisotto").addEventListener("click", () => {
-  document.querySelector(".recette4").classList.remove("hide")});
-
-// verrine:
-document.querySelector (".recetteVerine").addEventListener("click", () => {
-  document.querySelector(".recette5").classList.remove("hide")});
-
-// tacos:
-document.querySelector (".recetteTacos").addEventListener("click", () => {
-  document.querySelector(".recette6").classList.remove("hide")});
-
-
-
-//image and filter
-const filterButtons = document.querySelectorAll(".filter");
-    const recipes = document.querySelectorAll(".taging");
-
-    filterButtons.forEach(button => {
-      button.addEventListener("click", () => {
-        const filter = button.dataset.filter;
-
-        recipes.forEach(recipe => {
-          if (filter === "all" || recipe.classList.contains(filter)) {
-            recipe.style.display = "block";
-          } else {
-            recipe.style.display = "none";
-          }
+          // TODO
         });
       });
-    });
 
+      function filter(filterElement) {
+        if (filterElement.id == "all") {
+          recipeEls.forEach((recipeEl) => {
+            recipeEl.classList.remove("hidden");
+          });
+        } else {
+          recipeEls.forEach((recipeEl) => {
+            if (recipeEl.classList.contains(filterElement.id)) {
+              recipeEl.classList.remove("hidden");
+            } else {
+              recipeEl.classList.add("hidden");
+            }
+          });
+        }
+      }
 
+      function hideAllRecipes() {
+        const recipeViews = document.querySelectorAll("#recipe-view > *");
 
-// taging
-const tag = document.querySelector("#tag");
-const addBtns = document.querySelectorAll("button#more");
-
-addBtns.forEach(addBtn => {
-  addBtn.addEventListener("click", () => {
-    tag.insertAdjacentHTML("beforeend", `
-      <div class="tag-item">
-        <span>vegetarian</span>
-        <button class="remove-tag">❌</button>
-      </div>
-    `);
-
-    const newTag = tag.lastElementChild;
-    const removeBtn = newTag.querySelector(".remove-tag");
-
-    removeBtn.addEventListener("click", () => {
-      newTag.remove();
-    });
-  });
-});
-</script>
-
-</section>
-</body>
-</html>
-</body>
+        for (let i = 0; i < recipeViews.length; i += 1) {
+          recipeViews[i].classList.add("hidden");
+        }
+      }
+    </script>
+  </body>
 </html>

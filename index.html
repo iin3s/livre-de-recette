@@ -282,11 +282,6 @@
       </section>
     </main>
     <script>
-function hideAllRecipes() {
-    document.querySelectorAll(".recipe-view").forEach((recipeView) => {
-      recipeView.classList.add("hidden");
-    });
-  }
 
 hideAllRecipes();
 
@@ -309,7 +304,6 @@ recipeEls.forEach((recipeEl) => {
 
   recipeEl.querySelector(".tag-submit").addEventListener("click", () => {
     const newTag = recipeEl.querySelector("input").value;
-   
 
     const existingTag = recipeEl.querySelector(`.tags > .${newTag}`);
 
